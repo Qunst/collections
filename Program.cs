@@ -65,8 +65,16 @@ namespace list_tutorial
 
             fibonacciNumbers.Add(previous+previous2);
 
-            foreach (var item in fibonacciNumbers)
-                Console.WriteLine(item);
+            //foreach (var item in fibonacciNumbers)
+            //    Console.WriteLine(item);
+
+            for (int i=0; i<20; i++)
+            {
+                Console.WriteLine(fibonacciNumbers[i]);
+                previous=fibonacciNumbers[fibonacciNumbers.Count-1];
+                previous2=fibonacciNumbers[fibonacciNumbers.Count-2];
+                fibonacciNumbers.Add(previous+previous2);
+            }
         }
         
     }
